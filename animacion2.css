@@ -1,0 +1,61 @@
+*{
+    margin:0;
+    padding:0;
+}
+#contenedor{
+    background: url("fondo.jpg");
+    width: 1366px;
+    height: 900px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    border-radius: 3px solid black;
+    -webkit-animation-name: fondo;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-delay: 0s;
+    
+    
+}
+#mario {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background: url(mario.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: -750px;
+    left: 300px;
+    z-index: 1;
+    -webkit-animation: mario 10s infinite linear 0s;
+
+}
+#enemigo {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    background:url("Iggy.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index:1;
+    bottom:-600px;
+    left: 1125px;
+    -webkit-animation: enemigo 2s infinite linear 0s;
+
+
+
+}
+@-webkit-keyframes fondo {
+   0% {background-position: left top;}
+    100% {background-position: right top;}
+}
+@-webkit-keyframes mario {
+    0% {-webkit-transform: translateX(0px);}
+    100%{-webkit-transform: translate(650px);}
+}
+@-webkit-keyframes enemigo {
+    0% {-webkit-transform: translateX(-300px);}
+    50%{-webkit-transform:rotateY(180deg);}
+    100%{-webkit-transform:translateX (-70px);}
+}
